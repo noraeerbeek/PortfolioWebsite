@@ -1,0 +1,418 @@
+/* General Styles */
+body, section {
+    background: #B1A7A6;
+    font-family: 'Lexend Exa', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    border: 2px solid #EBECF1;
+    border-radius: 30px;
+    animation: slide-in 1s ease-out;
+    background-color: #F5F3F4;
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    position: auto;
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  li:not(:last-child) {
+    margin-right: 80px;
+    margin-left: 10px;
+  }
+  
+  li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background 0.2s;
+  }
+  
+  a {
+    color: #161A1D;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  
+  li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    margin: 12px -12px;
+    padding: 0;
+    border: 2px solid;
+    border-radius: 5px;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  
+  li:hover {
+    background: #0B090A;
+    border: 2px solid #0B090A;
+  }
+  
+  li:hover a {
+    color: #F9F8FD;
+  }
+  
+  li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0px 3px 5px 2px #EBECF1;
+  }
+  
+  li:hover ul li a {
+    color: #F5F3F4;
+  }
+  
+  li ul li {
+    margin: -2px 0 0 -2px;
+    width: calc(100% - 20px);
+    line-height: 1.7;
+  }
+  
+  li ul li a {
+    color: #2375D8;
+  }
+  
+  /* Hero Section Styling */
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hero-content h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem; /* Adjust size as needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional shadow for better contrast */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+/* About Section */
+.about{
+    background-color: #660708; 
+    padding: 100px 10px;
+    text-align: center;
+    border-radius: 30px; /* Soft rounded corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .about h2 {
+    font-size: 42px;
+    color: #FFFFFF; /* Deep blue color */
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .about p {
+    font-size: 20px;
+    color: #FFFFFF; /* Muted blue for the text */
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .about:hover p {
+    color: #F5F3F4; /* Darker blue text when hovered */
+  }
+  
+  
+  /* Projects Section */
+
+.projects-section {
+   /* Reduced padding for a more compact layout */
+  transition: background-color 0.3s ease;
+  border-radius: 20px;  /* Rounded corners */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color:#0B090A;
+  color: #D3D3D3;  /* Light cream background */
+  text-align: center;
+  font-size: 33px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 36px;  /* Smaller font size for the heading */
+  color: #E5383B;  /* Vibrant red color for the heading */
+  margin-bottom: 20px; /* Reduce margin */
+  font-weight: 700; /* Slightly lighter font weight */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project-grid {
+  display: grid;  /* Changed to grid for better control */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Adjust grid for smaller items */
+  gap: 161.5px;  /* Reduced gap between grid items */
+  justify-items: center;
+  margin-right: 9px;
+    /* Light cream background */
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;  /* Slightly smaller radius */
+  background-color: #FFFFFF;  /* White background for each project item */
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);  /* Light shadow around each item */
+  margin-top: 50px;
+ margin-left: 50px;
+  width:310px;
+  height: 940px;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 20px 20px;  /* Rounded corners */
+  
+}
+
+.project-item h3 {
+  font-size: 1.2rem;  /* Smaller font size for titles */
+  color: #660708;  /* Dark red for titles */
+  
+    /* Vibrant red background */
+  margin-top: 0;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 2px solid #660708;  /* Dark red border under title */
+}
+
+.project-item p {
+  padding: 15px;
+  color: #0B090A; /* Very dark grey text */
+  font-size: 16px;  /* Smaller font size for descriptions */
+  line-height: 1.4;
+  text-align: center;
+  background-color:#FFFFFF;  /* Light greyish brown background */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.project-item p i {
+  /* Space between icons and text */
+  font-size: 1.2rem;  /* Size of the icons */
+  color: #BA181B;  /* Deep red color for icons */
+}
+
+
+  
+  
+  /* Animations */
+  @keyframes slide-in-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .about, .projects {
+    animation: slide-in-up 1s ease-out;
+  }
+  
+  
+  /* Animation for Slide-In */
+  @keyframes slide-in {
+    0% {
+      top: -50px;
+    }
+    40% {
+      top: 20px;
+    }
+    70% {
+      top: 10px;
+    }
+    100% {
+      top: 15px;
+    }
+  }
+  
+  
+
+
+
+
+
+.my{
+  background-color: #D3D3D3;
+  padding-top:100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position:absolute;
+ 
+}
+.aboutme{
+  background-color:#E5383B;
+  border-radius: 25px;
+  padding:14px;
+  margin:8px;
+  font-size: 22px;
+}
+
+
+.mymission{
+
+  border-radius: 25px;
+  background-color: #0B090A;
+  color: #e6efff;
+  padding:14px; 
+  margin: 8px;
+  font-size: 22px;
+
+}
+.myinterest{
+  border-radius: 25px;
+  background-color: #F5F3F4;
+  padding:14px; 
+  margin: 8px;
+  font-size: 22px;
+}
+
+.highlight{
+  border-radius: 25px;
+  background-color: #B1A7A6;
+ 
+  padding:14px; 
+  margin: 8px;
+  font-size: 22px;
+}
+/* Style for the cards container */
+.resume-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+  grid-template-rows: auto auto; /* Creates two rows */
+  gap: 20px; /* Adds gap between the cards */
+  padding: 20px; /* Adds padding around the grid */
+}
+
+/* Style for each card */
+.resume-card {
+  background-color: #F5F3F4; /* Light background color */
+  border: 1px solid #B1A7A6; /* Soft border */
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px;
+  transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Hover effect for the cards */
+.resume-card:hover {
+  background-color: #660708; /* Dark red background on hover */
+  border-color: #BA181B; /* Change border to a darker red */
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Style for the title of the card */
+.resume-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #0B090A; /* Dark text color */
+}
+
+/* Style for the content of the card */
+.resume-card-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #161A1D; /* Dark grey text for content */
+}
+
+/* Adjust text color when hovered */
+.resume-card:hover .resume-card-title {
+  color: #FFFFFF; /* White text on hover */
+}
+
+.resume-card:hover .resume-card-content {
+  color: #FFFFFF; /* White text on hover */
+}
+
+
+
+.tech-used {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.tech-used h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.tech-used ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-used li {
+  margin: 5px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.tech-used li i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.tech-used li:hover{
+  background-color: #B1A7A6;
+}
